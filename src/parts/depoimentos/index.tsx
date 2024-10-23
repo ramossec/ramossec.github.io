@@ -6,7 +6,7 @@ export default function Depoimentos(){
     {
       name: "João Silva",
       role: "CEO da TechInova",
-      image: "https://i.pravatar.cc/300?img=1",
+      image: "https://i.pravatar.cc/300?img=12",
       text: "A RamosSec transformou completamente nossa infraestrutura de TI. A segurança e eficiência de nossos sistemas melhoraram significativamente. Recomendo seus serviços sem hesitação!"
     },
     {
