@@ -1,6 +1,7 @@
 import React, { useState } from "react"
 import Section from "@components/section";
-import { supabase } from "../../services/supabase";
+import { supabase } from "@services/supabase";
+import InputMask from 'react-input-mask';
 
 export default function Formulario() {
   const [formData, setFormData] = useState({
@@ -15,13 +16,6 @@ export default function Formulario() {
       ...prevState,
       [name]: value
     }));
-
-    if (name === "whatsapp") {
-      const x = value.replace(/\D/g, '').match(/(\d{0,2})(\d{0,5})(\d{0,4})/);
-      if (x) {
-        e.target.value = !x[2] ? x[1] : `(${x[1]}) ${x[2]}${x[3] ? `-${x[3]}` : ''}`;
-      }
-    }
   };
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
@@ -33,7 +27,7 @@ export default function Formulario() {
           { 
             name: formData.nome,
             email: formData.email,
-            whatsapp: formData.whatsapp
+            whatsapp: formData.whatsapp // Remove caracteres não numéricos antes de salvar
           }
         ]);
 
@@ -76,16 +70,13 @@ export default function Formulario() {
             placeholder="Seu melhor e-mail para contato"
             required
           />
-          <input
-            type="tel"
+          <InputMask
+            mask="(99) 99999-9999"
             name="whatsapp"
             value={formData.whatsapp}
             onChange={handleChange}
             className="w-full p-4 rounded-lg bg-white bg-opacity-20 text-white placeholder-gray-300 border border-white border-opacity-30 focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-300"
             placeholder="Seu WhatsApp com DDD (ex: 11 99999-9999)"
-            pattern="\([0-9]{2}\)\s[0-9]{5}-[0-9]{4}"
-            title="Por favor, insira um número de WhatsApp válido no formato (99) 99999-9999"
-            maxLength={15}
             required
           />
           <input
