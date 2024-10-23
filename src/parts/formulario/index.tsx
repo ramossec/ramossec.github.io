@@ -1,7 +1,53 @@
-import React from "react"
+import React, { useState } from "react"
 import Section from "@components/section";
+import { supabase } from "../../services/supabase";
 
-export default function Formulario(submit: any) {
+export default function Formulario() {
+  const [formData, setFormData] = useState({
+    nome: "",
+    email: "",
+    whatsapp: ""
+  });
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const { name, value } = e.target;
+    setFormData(prevState => ({
+      ...prevState,
+      [name]: value
+    }));
+
+    if (name === "whatsapp") {
+      const x = value.replace(/\D/g, '').match(/(\d{0,2})(\d{0,5})(\d{0,4})/);
+      if (x) {
+        e.target.value = !x[2] ? x[1] : `(${x[1]}) ${x[2]}${x[3] ? `-${x[3]}` : ''}`;
+      }
+    }
+  };
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    try {
+      const { data, error } = await supabase
+        .from('clients')
+        .insert([
+          { 
+            name: formData.nome,
+            email: formData.email,
+            whatsapp: formData.whatsapp
+          }
+        ]);
+
+      if (error) throw error;
+      console.log('Form submitted successfully:', data);
+      // Reset form after successful submission
+      setFormData({ nome: "", email: "", whatsapp: "" });
+      alert('Obrigado! Entraremos em contato em breve.');
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      alert('Ocorreu um erro ao enviar o formulário. Por favor, tente novamente.');
+    }
+  };
+
   return (
     <Section
       className="container mx-auto bg-motion-back p-8 md:p-12 rounded-xl shadow-lg"
@@ -10,34 +56,37 @@ export default function Formulario(submit: any) {
       <h2 className="text-3xl md:text-4xl text-center text-white font-bold mb-8 md:mb-10">
         Pronto para revolucionar seu negócio?
       </h2>
-      <form onSubmit={submit} className="max-w-md mx-auto">
+      <form onSubmit={handleSubmit} className="max-w-md mx-auto">
         <div className="flex flex-col gap-6">
           <input
             type="text"
             name="nome"
+            value={formData.nome}
+            onChange={handleChange}
             className="w-full p-4 rounded-lg bg-white bg-opacity-20 text-white placeholder-gray-300 border border-white border-opacity-30 focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-300"
             placeholder="Seu nome completo"
+            required
           />
           <input
             type="email"
             name="email"
+            value={formData.email}
+            onChange={handleChange}
             className="w-full p-4 rounded-lg bg-white bg-opacity-20 text-white placeholder-gray-300 border border-white border-opacity-30 focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-300"
             placeholder="Seu melhor e-mail para contato"
+            required
           />
           <input
             type="tel"
             name="whatsapp"
+            value={formData.whatsapp}
+            onChange={handleChange}
             className="w-full p-4 rounded-lg bg-white bg-opacity-20 text-white placeholder-gray-300 border border-white border-opacity-30 focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-300"
             placeholder="Seu WhatsApp com DDD (ex: 11 99999-9999)"
             pattern="\([0-9]{2}\)\s[0-9]{5}-[0-9]{4}"
             title="Por favor, insira um número de WhatsApp válido no formato (99) 99999-9999"
             maxLength={15}
-            onChange={(e) => {
-              const x = e.target.value.replace(/\D/g, '').match(/(\d{0,2})(\d{0,5})(\d{0,4})/);
-              if (x) { // Check if x is not null
-                e.target.value = !x[2] ? x[1] : `(${x[1]}) ${x[2]}${x[3] ? `-${x[3]}` : ''}`;
-              }
-            }}
+            required
           />
           <input
             type="submit"
