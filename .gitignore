@@ -2,3 +2,9 @@ node_modules/
 .cache/
 public
 src/gatsby-types.d.ts
+.DS_Store
+.env
+.eslintrc.json
+.prettierignore
+.prettierrc
+
