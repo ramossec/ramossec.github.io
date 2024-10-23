@@ -6,6 +6,9 @@ import { supabase } from '@services/supabase'
 import Depoimentos from '@parts/depoimentos/index';
 import Formulario from "@parts/formulario";
 import Team from "@parts/team";
+import { Time } from "@types";
+import Servicos from "@parts/serviços";
+import Footer from "@parts/footer";
 const IndexPage: React.FC<PageProps> = () => {
 
 
@@ -30,18 +33,25 @@ const IndexPage: React.FC<PageProps> = () => {
       event.target.email.value = "";
       event.target.whatsapp.value = "";
 
-
       return alert("Contato Enviado com sucesso!!Em breve entraremos em contato");
     }
     catch (error) {
-
       return alert(error)
-
     }
 
   }
 
+  const time: Time = [
+    {
+      nome: "Iuri Ramos",
+      imagem: "https://avatars.githubusercontent.com/u/35300523?v=4&size=auto",
+      cargo: "CEO",
+      formacao: "Formado em Análise e Desenvolvimento de sistemas e Pós Graduado em Segurança da Informação"
+    }
+  ];
+
   return (
+
     <>
       <Header />
       <main className=" w-full min-h-screen container-lg mx-auto ">
@@ -54,10 +64,12 @@ const IndexPage: React.FC<PageProps> = () => {
             Saiba Mais
           </button> */}
         </Section>
+        <Servicos />
         <Formulario submit={Handlesubmit} />
         <Depoimentos />
-        <Team />
+        <Team equipe={time} />
       </main>
+      <Footer/>
     </>
   );
 };

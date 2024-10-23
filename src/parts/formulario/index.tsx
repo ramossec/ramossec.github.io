@@ -1,43 +1,51 @@
 import React from "react"
 import Section from "@components/section";
 
-export default function Formulario(submit:any){
+export default function Formulario(submit: any) {
   return (
-<Section
-          className=" bg-cyan-800 py-28 container mx-auto"
-          title="contact-form"
-        >
-          <h2 className="md:text-4xl p-20 text-center text-white font-bold md:text-wrap">
-            Pronto para revolucionar seu negócio?
-          </h2>
-          <form onSubmit={submit}>
-            <div className="flex md:flex-row flex-col items-center justify-center h-full gap-4">
-              <input
-                type="text"
-                name="nome"
-                className="p-4 md:w-96 w-80 h-12 rounded-lg"
-                placeholder="Nome"
-              />
-              <input
-                type="text"
-                name="email"
-                className="p-4 md:w-96 w-80 h-12 rounded-lg"
-                placeholder="Digite seu melhor e-mail"
-              />
-              <input
-                type="text"
-                name="whatsapp"
-                className="p-4 md:w-96 w-80 h-12 rounded-lg"
-                placeholder="Digite seu whatsapp"
-              />
-              <input
-                type="submit"
-                value="Enviar"
-                className=" bg-slate-500 p-4 rounded-lg text-white hover:bg-slate-800 hover:cursor-pointer "
-              />
-            </div>
-          </form>
-        </Section>
-
+    <Section
+      className="container mx-auto bg-motion-back p-8 md:p-12 rounded-xl shadow-lg"
+      title="contact-form"
+    >
+      <h2 className="text-3xl md:text-4xl text-center text-white font-bold mb-8 md:mb-10">
+        Pronto para revolucionar seu negócio?
+      </h2>
+      <form onSubmit={submit} className="max-w-md mx-auto">
+        <div className="flex flex-col gap-6">
+          <input
+            type="text"
+            name="nome"
+            className="w-full p-4 rounded-lg bg-white bg-opacity-20 text-white placeholder-gray-300 border border-white border-opacity-30 focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-300"
+            placeholder="Seu nome completo"
+          />
+          <input
+            type="email"
+            name="email"
+            className="w-full p-4 rounded-lg bg-white bg-opacity-20 text-white placeholder-gray-300 border border-white border-opacity-30 focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-300"
+            placeholder="Seu melhor e-mail para contato"
+          />
+          <input
+            type="tel"
+            name="whatsapp"
+            className="w-full p-4 rounded-lg bg-white bg-opacity-20 text-white placeholder-gray-300 border border-white border-opacity-30 focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-300"
+            placeholder="Seu WhatsApp com DDD (ex: 11 99999-9999)"
+            pattern="\([0-9]{2}\)\s[0-9]{5}-[0-9]{4}"
+            title="Por favor, insira um número de WhatsApp válido no formato (99) 99999-9999"
+            maxLength={15}
+            onChange={(e) => {
+              const x = e.target.value.replace(/\D/g, '').match(/(\d{0,2})(\d{0,5})(\d{0,4})/);
+              if (x) { // Check if x is not null
+                e.target.value = !x[2] ? x[1] : `(${x[1]}) ${x[2]}${x[3] ? `-${x[3]}` : ''}`;
+              }
+            }}
+          />
+          <input
+            type="submit"
+            value="Solicitar contato"
+            className="w-full bg-blue-600 p-4 rounded-lg text-white font-semibold hover:bg-blue-700 cursor-pointer transition duration-300 transform hover:scale-105"
+          />
+        </div>
+      </form>
+    </Section>
   );
 }
