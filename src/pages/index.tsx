@@ -66,7 +66,7 @@ const IndexPage: React.FC<PageProps> = () => {
         </Section>
         <Servicos />
         <Formulario />
-        <Depoimentos />
+        {/* <Depoimentos /> */}
         <Team equipe={time} />
       </main>
       <Footer/>

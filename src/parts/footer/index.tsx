@@ -22,8 +22,8 @@ export default function Footer() {
           <div>
             <h3 className="text-xl font-semibold mb-4">Contato</h3>
             <p className="text-gray-300 mb-2">Email: contato@ramossec.com</p>
-            <p className="text-gray-300 mb-2">Telefone: (14) 1234-5678</p>
-            <p className="text-gray-300">Endereço: Av. Paulista, 1000 - São Paulo, SP</p>
+            {/* <p className="text-gray-300 mb-2">Telefone: (14) 1234-5678</p>
+            <p className="text-gray-300">Endereço: Av. Paulista, 1000 - São Paulo, SP</p> */}
           </div>
           <div>
             <h3 className="text-xl font-semibold mb-4">Redes Sociais</h3>
