@@ -57,7 +57,7 @@ const IndexPage: React.FC<PageProps> = () => {
       <main className=" w-full min-h-screen container-lg mx-auto ">
         <Section className="py-48 px-4 bg-sky-700 container mx-auto bg-tech bg-cover">
           <h1 className="text-4xl md:text-7xl text-white font-medium">RamosSec</h1>
-          <h4 className="text-2xl text-white font-light">
+          <h4 className="text-2xl text-white font-medium">
             Transforme seu negócio com soluções digitais inovadoras e seguras
           </h4>
           {/* <button className="p-4 bg-cyan-600 text-bold font-semibold font-serif rounded-full my-5 text-gray-700 ">

@@ -44,7 +44,7 @@ const config: GatsbyConfig = {
   {
     resolve: 'gatsby-plugin-module-resolver',
     options: {
-      root: './src', // <- will be used as a root dir
+      root: 'src', // <- will be used as a root dir
       aliases: {
         '@components': './components', // <- will become ./src/components
         '@parts':'./parts',
@@ -87,7 +87,7 @@ const config: GatsbyConfig = {
       // This object is used for configuration specific to this plugin
       pluginConfig: {
         // Puts tracking script in the head instead of the body
-        head: false,
+        head: true,
         // Setting this parameter is also optional
         respectDNT: true,
         // Avoids sending pageview hits from custom paths
@@ -99,13 +99,13 @@ const config: GatsbyConfig = {
       },
     },
   },
-  {
-    resolve: "gatsby-plugin-google-tagmanager",
-    options: {
-      id: "G-2PNBDL402P",
-      includeInDevelopment: true,
-    },
-  },
+  // {
+  //   resolve: "gatsby-plugin-google-tagmanager",
+  //   options: {
+  //     id: "G-2PNBDL402P",
+  //     includeInDevelopment: true,
+  //   },
+  // },
   // {
   //   resolve: `gatsby-source-supabase`,
   //   options: {
