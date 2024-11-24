@@ -2,7 +2,6 @@ import * as React from "react";
 import type { HeadFC, PageProps } from "gatsby";
 import { Header } from "@components/Header";
 import Section from "@components/section/index";
-import { supabase } from '@services/supabase'
 import Depoimentos from '@parts/depoimentos/index';
 import Formulario from "@parts/formulario";
 import Team from "@parts/team";
@@ -12,34 +11,34 @@ import Footer from "@parts/footer";
 const IndexPage: React.FC<PageProps> = () => {
 
 
-  const Handlesubmit = async (event: any) => {
-    event.preventDefault();
-    let data = {
-      name: event.target.nome.value,
-      email: event.target.email.value,
-      whatsapp: event.target.whatsapp.value,
-      // whatsapp:event.target.whatsapp.value
-    }
-    // alert(JSON.stringify(data))
-    // return console.log(supabase)
-    try {
-      const response = await supabase.from('clients').insert({
-        name: data.name,
-        email: data.email,
-        whatsapp: data.whatsapp,
-      })
+  // const Handlesubmit = async (event: any) => {
+  //   event.preventDefault();
+  //   let data = {
+  //     name: event.target.nome.value,
+  //     email: event.target.email.value,
+  //     whatsapp: event.target.whatsapp.value,
+  //     // whatsapp:event.target.whatsapp.value
+  //   }
+  //   // alert(JSON.stringify(data))
+  //   // return console.log(supabase)
+  //   try {
+  //     const response = await supabase.from('clients').insert({
+  //       name: data.name,
+  //       email: data.email,
+  //       whatsapp: data.whatsapp,
+  //     })
 
-      event.target.nome.value = "";
-      event.target.email.value = "";
-      event.target.whatsapp.value = "";
+  //     event.target.nome.value = "";
+  //     event.target.email.value = "";
+  //     event.target.whatsapp.value = "";
 
-      return alert("Contato Enviado com sucesso!!Em breve entraremos em contato");
-    }
-    catch (error) {
-      return alert(error)
-    }
+  //     return alert("Contato Enviado com sucesso!!Em breve entraremos em contato");
+  //   }
+  //   catch (error) {
+  //     return alert(error)
+  //   }
 
-  }
+  // }
 
   const time: Time = [
     {
@@ -55,9 +54,9 @@ const IndexPage: React.FC<PageProps> = () => {
     <>
       <Header />
       <main className=" w-full min-h-screen container-lg mx-auto ">
-        <Section className="py-48 px-4 bg-sky-700 container mx-auto bg-tech bg-cover">
+        <Section className="py-48 px-4 container mx-auto bg-tech bg-cover bg-clip-padding">
           <h1 className="text-4xl md:text-7xl text-white font-medium">RamosSec</h1>
-          <h4 className="text-2xl text-white font-medium">
+          <h4 className="text-2xl text-white font-medium md:w-[26%]">
             Transforme seu negócio com soluções digitais inovadoras e seguras
           </h4>
           {/* <button className="p-4 bg-cyan-600 text-bold font-semibold font-serif rounded-full my-5 text-gray-700 ">

@@ -20,6 +20,15 @@ export default function Servicos(){
           <div className="bg-white rounded-lg shadow-md p-4 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 ease-in-out cursor-pointer">
             <div className="flex items-center mb-3">
               <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 mr-2 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
+              </svg>
+              <h3 className="text-xl font-semibold">Desenvolvimento Mobile</h3>
+            </div>
+            <p className="text-gray-600 text-sm">Criamos aplicativos móveis intuitivos e eficientes para iOS e Android, impulsionando sua presença no mercado mobile.</p>
+          </div>
+          <div className="bg-white rounded-lg shadow-md p-4 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 ease-in-out cursor-pointer">
+            <div className="flex items-center mb-3">
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 mr-2 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
               </svg>
               <h3 className="text-xl font-semibold">Segurança da Informação</h3>
@@ -35,16 +44,8 @@ export default function Servicos(){
             </div>
             <p className="text-gray-600 text-sm">Fornecemos orientação especializada para otimizar seus processos de TI e impulsionar a eficiência do seu negócio.</p>
           </div>
-          <div className="bg-white rounded-lg shadow-md p-4 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 ease-in-out cursor-pointer">
-            <div className="flex items-center mb-3">
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 mr-2 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
-              </svg>
-              <h3 className="text-xl font-semibold">Desenvolvimento Mobile</h3>
-            </div>
-            <p className="text-gray-600 text-sm">Criamos aplicativos móveis intuitivos e eficientes para iOS e Android, impulsionando sua presença no mercado mobile.</p>
-          </div>
-          <div className="bg-white rounded-lg shadow-md p-4 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 ease-in-out cursor-pointer">
+         
+          {/* <div className="bg-white rounded-lg shadow-md p-4 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 ease-in-out cursor-pointer">
             <div className="flex items-center mb-3">
               <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 mr-2 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z" />
@@ -52,8 +53,8 @@ export default function Servicos(){
               <h3 className="text-xl font-semibold">Cloud Computing</h3>
             </div>
             <p className="text-gray-600 text-sm">Implementamos e gerenciamos soluções em nuvem para melhorar a escalabilidade e eficiência de sua infraestrutura de TI.</p>
-          </div>
-          <div className="bg-white rounded-lg shadow-md p-4 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 ease-in-out cursor-pointer">
+          </div> */}
+          {/* <div className="bg-white rounded-lg shadow-md p-4 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 ease-in-out cursor-pointer">
             <div className="flex items-center mb-3">
               <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 mr-2 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
@@ -61,7 +62,7 @@ export default function Servicos(){
               <h3 className="text-xl font-semibold">Análise de Dados</h3>
             </div>
             <p className="text-gray-600 text-sm">Utilizamos técnicas avançadas de análise de dados para fornecer insights valiosos e apoiar a tomada de decisões estratégicas.</p>
-          </div>
+          </div> */}
           <div className="bg-white rounded-lg shadow-md p-4 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 ease-in-out cursor-pointer">
             <div className="flex items-center mb-3">
               <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 mr-2 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
