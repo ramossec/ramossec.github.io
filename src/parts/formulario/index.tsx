@@ -31,14 +31,17 @@ export default function Formulario() {
           }
         ]);
 
-      if (error) throw error;
-      console.log('Form submitted successfully:', data);
+      if(error) throw error;
       // Reset form after successful submission
       setFormData({ nome: "", email: "", whatsapp: "" });
       alert('Obrigado! Entraremos em contato em breve.');
-    } catch (error) {
+    } catch (error:any) {
       console.error('Error submitting form:', error);
-      alert('Ocorreu um erro ao enviar o formulário. Por favor, tente novamente.');
+      switch(error.code){
+        case '23505': alert('Email já cadastrado');break;
+        default: alert('Ocorreu um erro ao enviar o formulário. Por favor, tente novamente.');break;
+      }
+     
     }
   };
 
