@@ -1,6 +1,7 @@
 import React from "react";
 
 export default function Footer() {
+  const year = new Date().getFullYear();
   return (
     <footer className="bg-gray-900 text-white py-16">
       <div className="container mx-auto px-4">
@@ -8,7 +9,7 @@ export default function Footer() {
           <div>
             <h2 className="text-3xl font-bold mb-4">RamosSec</h2>
             <p className="text-gray-300 mb-4">Transformando negócios com soluções digitais inovadoras e seguras.</p>
-            <p className="text-sm text-gray-400">&copy; 2024 RamosSec. Todos os direitos reservados.</p>
+            <p className="text-sm text-gray-400">&copy; {year} RamosSec. Todos os direitos reservados.</p>
           </div>
           <div>
             <h3 className="text-xl font-semibold mb-4">Serviços</h3>
