@@ -92,10 +92,7 @@ export default function Servicos(){
           </div>
         </div>
       </div>
-
-
-
-
+      
     </Section>
   )
 }

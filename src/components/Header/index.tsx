@@ -16,9 +16,7 @@ export function Header() {
           alt="Logo"
           className="max-w-16 rounded-lg mr-2"
         />
-        
       </div>
-
       <nav className="flex-grow">
         <ul className="flex justify-center items-center">
           {menu.map((item, index) => (
@@ -34,7 +32,6 @@ export function Header() {
           ))}
         </ul>
       </nav>
-
       <a href="#contact-form" className="text-lg bg-white text-blue-700 px-4 py-2 rounded-full font-bold transition-all duration-300 hover:bg-blue-100 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-blue-300 focus:ring-opacity-50">
         Fale Conosco
       </a>

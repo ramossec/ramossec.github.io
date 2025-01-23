@@ -29,7 +29,6 @@ export default function Depoimentos(){
       title="depoiments"
     >
       <h1 className="text-center md:text-6xl text-4xl mb-12">Depoimentos</h1>
-
       <div className="flex flex-wrap justify-center items-stretch p-10">
         {testimonials.map((testimonial, index) => (
           <div key={index} className="max-w-sm w-full md:w-1/3 rounded-lg overflow-hidden shadow-lg m-4 flex flex-col items-center justify-center p-6 transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 hover:bg-blue-50 cursor-pointer">
