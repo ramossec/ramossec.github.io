@@ -2,6 +2,7 @@ import React from 'react'
 import { graphql, PageProps } from 'gatsby'
 import { Header } from '@components/Header'
 import Footer from '@parts/footer'
+import { HeadFC } from 'gatsby';
 
 interface BlogPost {
   id: string
@@ -97,3 +98,8 @@ export const query = graphql`
 `
 
 export default Blog;
+
+export const Head: HeadFC = ()=> <head>
+  <title>RamosSec - Blog</title>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6481815227988488"></script>
+</head>

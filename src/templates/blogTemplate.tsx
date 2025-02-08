@@ -1,5 +1,5 @@
 import React from "react"
-import { graphql } from "gatsby"
+import { graphql, HeadFC } from "gatsby"
 import { GraphQLObjectType } from 'graphql';
 
 
@@ -43,3 +43,10 @@ export const query = graphql`
 `
 
 export default BlogTemplate
+
+export const Head: HeadFC = () => 
+  
+<head>
+  <title>RamosSec - Blog </title>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6481815227988488"></script>
+</head>
