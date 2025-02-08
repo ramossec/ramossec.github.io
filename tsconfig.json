@@ -36,7 +36,7 @@
       "@parts/*":["src/parts/*"],
       "@components/*":["src/components/*"],
       "@services/*":["src/services/*"],
-      "@types":["src/@types/index.ts"]
+      "@types":["src/@types"]
     },
     // "paths": {},                                      /* Specify a set of entries that re-map imports to additional lookup locations. */
     // "rootDirs": [],                                   /* Allow multiple folders to be treated as one when resolving modules. */
@@ -113,5 +113,12 @@
     "./gatsby-node.ts",
     "./gatsby-config.ts",
     "./plugins/**/*"
-  ]
+  ],
+  "compilerOptions": {
+    "typeRoots": [
+      "./node_modules/@types",
+      "./src/@types"
+    ],
+ 
+  }
 }

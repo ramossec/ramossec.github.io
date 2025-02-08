@@ -14,7 +14,7 @@ const config: GatsbyConfig = {
   // Learn more at: https://gatsby.dev/graphql-typegen
   graphqlTypegen: true,
   plugins: [
-     "gatsby-plugin-image", "gatsby-plugin-sharp", "gatsby-transformer-sharp", "gatsby-plugin-postcss", "gatsby-plugin-sitemap", 
+     "gatsby-plugin-image", "gatsby-plugin-sharp", "gatsby-transformer-sharp", "gatsby-plugin-postcss", "gatsby-plugin-sitemap",'gatsby-transformer-remark','gatsby-plugin-typegen', 
      {
     resolve: 'gatsby-plugin-manifest',
     options: {
@@ -99,13 +99,20 @@ const config: GatsbyConfig = {
       },
     },
   },
-  // {
-  //   resolve: "gatsby-plugin-google-tagmanager",
-  //   options: {
-  //     id: "G-2PNBDL402P",
-  //     includeInDevelopment: true,
-  //   },
-  // },
+  {
+    resolve: 'gatsby-source-filesystem',
+    options: {
+      path: `${__dirname}/src/content/blog`, // O caminho para os arquivos Markdown
+      name: 'blog',
+    },
+  },
+  {
+    resolve: `gatsby-plugin-google-adsense`,
+    options: {
+      publisherId: `ca-pub-6481815227988488`, // Substitua pelo seu ID do AdSense
+    },
+  },
+  
   // {
   //   resolve: `gatsby-source-supabase`,
   //   options: {

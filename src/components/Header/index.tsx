@@ -6,6 +6,7 @@ export function Header() {
   const menu = [
     { name: "Início", link: "/" },
     // { name: "Portfólio", link: "/portfolio" },
+    { name: "Blog", link: "/blog" },
   ];
 
   return (
