@@ -7,7 +7,6 @@ const config: GatsbyConfig = {
     description:'Sua privacidade em primeiro lugar',
     siteUrl: `https://www.ramossec.com.br`,
     author: `@ramossec`,
-    
   },
   // More easily incorporate content into your pages through automatic TypeScript type generation and better GraphQL IntelliSense.
   // If you use VSCode you can also use the GraphQL plugin
@@ -102,7 +101,7 @@ const config: GatsbyConfig = {
   {
     resolve: 'gatsby-source-filesystem',
     options: {
-      path: `${__dirname}/src/content/blog`, // O caminho para os arquivos Markdown
+      path: `${__dirname}/src/posts/blog`, // O caminho para os arquivos Markdown
       name: 'blog',
     },
   },
