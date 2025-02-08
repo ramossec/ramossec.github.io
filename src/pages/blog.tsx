@@ -39,7 +39,7 @@ const Blog: React.FC<PageProps<BlogPageData>> = ({ data }) => {
             </h2>
             
             <time className="text-sm text-gray-600 mb-4 block">
-              {post.frontmatter.date}
+              {new Date(post.frontmatter.date).toLocaleDateString('pt-BR', { day: '2-digit', month: 'long', year: 'numeric' })}
             </time>
             
             <p className="text-gray-700 mb-4 leading-relaxed">
