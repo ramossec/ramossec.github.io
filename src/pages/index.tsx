@@ -75,4 +75,7 @@ const IndexPage: React.FC<PageProps> = () => {
 
 export default IndexPage;
 
-export const Head: HeadFC = () => <title>Ramos Sec</title>;
+export const Head: HeadFC = () => <head>
+<title>RamosSec</title>
+<meta name="google-adsense-account" content="ca-pub-6481815227988488"></meta>
+</head>

@@ -17,4 +17,7 @@ const PortfolioPage: React.FC<PageProps> = () => {
 
 export default PortfolioPage;
 
-export const Head: HeadFC = () => <title>Ramos Sec - Portfólio</title>;
+export const Head: HeadFC = () => <head>
+<title>RamosSec - Portfolio</title>
+<meta name="google-adsense-account" content="ca-pub-6481815227988488"></meta>
+</head>
