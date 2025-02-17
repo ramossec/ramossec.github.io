@@ -105,12 +105,6 @@ const config: GatsbyConfig = {
       name: 'blog',
     },
   },
-  {
-    resolve: `gatsby-plugin-google-adsense`,
-    options: {
-      publisherId: `ca-pub-6481815227988488`, // Substitua pelo seu ID do AdSense
-    },
-  },
   
   // {
   //   resolve: `gatsby-source-supabase`,
