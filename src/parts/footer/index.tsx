@@ -1,3 +1,4 @@
+import { Mail, MapPin, Phone } from "lucide-react";
 import React from "react";
 
 export default function Footer() {
@@ -14,17 +15,26 @@ export default function Footer() {
           <div>
             <h3 className="text-xl font-semibold mb-4">Serviços</h3>
             <ul className="space-y-2">
-              <li><a href="#" className="text-gray-300 hover:text-white transition duration-300">Desenvolvimento Web</a></li>
-              <li><a href="#" className="text-gray-300 hover:text-white transition duration-300">Segurança da Informação</a></li>
-              <li><a href="#" className="text-gray-300 hover:text-white transition duration-300">Consultoria em TI</a></li>
-              <li><a href="#" className="text-gray-300 hover:text-white transition duration-300">Desenvolvimento Mobile</a></li>
+              <li><a href="#services" className="text-gray-300 hover:text-white transition duration-300">Desenvolvimento Web</a></li>
+              <li><a href="#services" className="text-gray-300 hover:text-white transition duration-300">Segurança da Informação</a></li>
+              <li><a href="#services" className="text-gray-300 hover:text-white transition duration-300">Consultoria em TI</a></li>
+              <li><a href="#services" className="text-gray-300 hover:text-white transition duration-300">Desenvolvimento Mobile</a></li>
             </ul>
           </div>
           <div>
             <h3 className="text-xl font-semibold mb-4">Contato</h3>
-            <p className="text-gray-300 mb-2">Email: contato@ramossec.com</p>
-            {/* <p className="text-gray-300 mb-2">Telefone: (14) 1234-5678</p>
-            <p className="text-gray-300">Endereço: Av. Paulista, 1000 - São Paulo, SP</p> */}
+            <div className="flex items-center text-gray-300 mb-2">
+              <Mail className="w-4 h-4 mr-2" />
+              <span>contato@ramossec.com</span>
+            </div>
+            <div className="flex items-center text-gray-300 mb-2">
+              <Phone className="w-4 h-4 mr-2" />
+              <span>(14) 99122-1870</span>
+            </div>
+            <div className="flex items-center text-gray-300">
+              <MapPin className="w-4 h-4 mr-2" />
+              <span> Rua Taquaritinga,600 - Marília, SP</span>
+            </div>
           </div>
           <div>
             <h3 className="text-xl font-semibold mb-4">Redes Sociais</h3>
