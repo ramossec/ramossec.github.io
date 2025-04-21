@@ -6,11 +6,11 @@ export function Header() {
   const menu = [
     { name: "Início", link: "/" },
     // { name: "Portfólio", link: "/portfolio" },
-    { name: "Blog", link: "/blog" },
+    // { name: "Blog", link: "/blog" },
   ];
 
   return (
-    <header className="flex flex-1 gap-5 h-20 bg-blue-700 px-4 items-center justify-between shadow-md sticky top-0 z-50 transition-all duration-300 ease-in-out">
+    <header className="flex flex-1 gap-5 h-20 bg-gradient-to-r from-blue-700 to-blue-900 px-4 items-center justify-between shadow-md sticky top-0 z-50 transition-all duration-300 ease-in-out">
       <div className="flex items-center">
         <StaticImage
           src="../../images/logo.png"

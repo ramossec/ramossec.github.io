@@ -54,8 +54,8 @@ const IndexPage: React.FC<PageProps> = () => {
 
     <>
       <Header />
-      <main className=" w-full min-h-screen container-lg mx-auto ">
-        <Section className="py-12 md:py-24 px-4 container mx-auto min-h-5 md:min-h-[60vh] bg-gradient-to-br from-cyan-700 to-blue-800">
+      <main className=" w-full min-h-screen container-lg mx-auto bg-gradient-to-br from-blue-700 to-blue-900 ">
+        <Section className="py-12 md:py-24 px-4 container mx-auto min-h-5 md:min-h-[60vh] ">
           <div className="grid md:grid-cols-2 gap-8 items-center">
             <div className="text-center md:text-left">
               <h1 className="text-4xl sm:text-5xl md:text-6xl text-white font-bold leading-tight mb-6">

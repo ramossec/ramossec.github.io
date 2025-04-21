@@ -10,7 +10,7 @@ interface TeamProps {
 const Team: React.FC<TeamProps> = ({ equipe }) => {
   return (
     <Section className="py-28 container mx-auto" title="team">
-      <h1 className="text-center text-3xl md:text-4xl lg:text-5xl xl:text-6xl mb-12 text-blue-700 font-bold">Nosso Time</h1>
+      <h1 className="text-center text-3xl md:text-4xl lg:text-5xl xl:text-6xl mb-12 text-white font-bold">Nosso Time</h1>
 
       <div className="flex flex-wrap justify-center items-stretch px-4 sm:px-6 md:px-8 lg:px-10">
         {equipe?.map((colaborador, i) => (
